@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="front-page -path-" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="Pokladna v JS pro SRPŠ">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="patternfly.css">
+    <link rel="stylesheet" href="patternfly-addons.css">
+  </head>
+
+  <body id="page-top">
+  <h1>Plesová karkulačka</h1>
+  <span class="pf-v5-c-form-control">
+        <input id="csv" type="file" accept=".csv" onchange="readFile(event)"/>
+  </span>
+  <hr class="pf-v5-c-divider" />
+<div id="polozky"> </div>
+<hr class="pf-v5-c-divider" />
+  <span class="pf-v5-c-badge pf-m-unread" id="summarize"></span>
+  <button class="pf-v5-c-button pf-m-danger" type="button" id="ulozto" onclick="download()">Uložit</button>
+</body>
+</html>
