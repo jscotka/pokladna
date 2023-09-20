@@ -1,9 +1,11 @@
-deps:
-	npm install @patternfly/patternfly --save
-	cp node_modules/@patternfly/patternfly/patternfly.css patternfly.css
-	cp node_modules/@patternfly/patternfly/patternfly-addons.css
-create_zip: deps
-	zip pokladna.zip index.html *.csv main.js
+all: create_zip
 
-all: creta_zip
+deps:
+	cd pokladna; npm install @patternfly/patternfly --save
+	cd pokladna; ln -sf node_modules/@patternfly/patternfly/patternfly.css
+	cd pokladna; ln -sf node_modules/@patternfly/patternfly/patternfly-addons.css
+
+create_zip: deps
+	zip -r build/pokladna.zip pokladna/index.html *.csv main.js *.css node*
+
 
