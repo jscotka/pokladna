@@ -6,6 +6,6 @@ deps:
 	cd pokladna; ln -sf node_modules/@patternfly/patternfly/patternfly-addons.css
 
 create_zip: deps
-	zip -r build/pokladna.zip pokladna
+	zip -r build/pokladna.zip pokladna seznamy
 
 
